@@ -43,11 +43,15 @@ export default function GuitarCardTemplate(guitar) {
         setExpanded(!expanded);
     };
     const selectGuitars = (props) => {
-        console.log(props)
-        setSelected(true)
+
+        if (props !== undefined) {
+            return [setSelectedGuitars(props), setSelected(true)]
+
+        }
+
     }
 
-
+    console.log(selectedGuitars)
     console.log(selected)
     return (
         <>
@@ -55,7 +59,7 @@ export default function GuitarCardTemplate(guitar) {
                 {{
                     background: '#abb7d9',
                     color: 'white'
-                }}                
+                }}
             >
                 {/* change seelected guitars input id from  guitar.guitar.id to guitar.guitar.uuid */}
                 <Card sx={{ maxWidth: 345 }} onClick={() => selectGuitars(guitar.guitar.model)}>
