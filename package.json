@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@mui/material": "^5.2.8",
-    "@reduxjs/toolkit": "^1.7.1"
-  }
-}

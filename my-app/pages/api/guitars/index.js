@@ -152,9 +152,9 @@ export default function handler(req, res) {
 
     switch (req.method) {
         case 'GET':
-            const { type } = req.query
-            if (type !== undefined) {
-                res.status(200).json(guitars.filter(guitar => guitar.type === type))
+            const { make } = req.query
+            if (make !== undefined) {
+                res.status(200).json(guitars.filter(guitar => guitar.make === make))
             } else {
                 res.status(200).json(guitars)
             }

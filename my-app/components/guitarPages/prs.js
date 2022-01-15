@@ -47,17 +47,19 @@ export default function PrsGuitars() {
 
 
   const fetchData = () => {
-    fetch('http://localhost:3000/api/guitars?make=Taylor')
+    fetch('http://localhost:3000/api/guitars?make=PRS')
       .then((response) => response.json())
       .then(response => {      
-        prsGuitarsFilter(response)      
+        setPrsGuitars(response)      
       })
   }
 
-  const prsGuitarsFilter = (response) => {
-    let result = response.filter(guitar => guitar.make === 'PRS')    
-    return setPrsGuitars(result)
-  }
+  // client filter
+  
+  // const prsGuitarsFilter = (response) => {
+  //   let result = response.filter(guitar => guitar.make === 'PRS')    
+  //   return setPrsGuitars(result)
+  // }
 
   
   return (

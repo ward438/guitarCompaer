@@ -50,14 +50,16 @@ export default function TayloyGuitars() {
     fetch('http://localhost:3000/api/guitars?make=Taylor')
       .then((response) => response.json())
       .then(response => {
-        taylorGuitarsFilter(response)
+        // taylorGuitarsFilter(response)
+        console.log(response)
+        setTaylorGuitars(response)
       })
   }
 
-  const taylorGuitarsFilter = (response) => {
-    let result = response.filter(guitar => guitar.make === 'Taylor')
-    return setTaylorGuitars(result)
-  }
+  // const taylorGuitarsFilter = (response) => {
+  //   let result = response.filter(guitar => guitar.make === 'Taylor')
+  //   return setTaylorGuitars(result)
+  // }
 
 
   console.log('taylorGuitars: ', taylorGuitars)

@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import GuitarCardTemplate from '../components/templates/guitarCardTemplate'
-
+import { useSelector } from "react-redux";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -17,8 +17,9 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 function Home() {
-
-
+    // state.guitars.value.selected    "guitars" is the string value of name in SelectedGuitarsReducer
+    // 'value' is the key under "initialState"
+  const selectedGuitars = useSelector((state => state.guitars.value.selected));
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -29,7 +30,10 @@ function Home() {
               background: '#81a2ff82',
               color: 'white'
             }}> Selected Guitars: 
-              
+            <br/>
+              {selectedGuitars.map(guitar=>{
+                return <><span>{guitar.make} - {guitar.model}</span><br/></>
+              })}
             </Item>
 
         </Grid>
