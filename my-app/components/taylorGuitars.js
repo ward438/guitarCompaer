@@ -25,13 +25,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Home from '../pages/home'
-import styles from '../styles/Home.module.css'
-import TaylorMenuButton from './guitarButtons/taylorButton'
-// import TayloyGuitars from './taylorGuitars'
-import MartinMenuButton from './guitarButtons/martinGuitarButton'
-import PaulReedSmithButton from './guitarButtons/prsButton'
-import GibsonButton from './guitarButtons/gibsonButton'
-import FenderButton from './guitarButtons/fenderButton'
+
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -94,14 +88,7 @@ export default function BasicTabs() {
     color: theme.palette.text.secondary,
   }));
 
-  const sideMenuDictionary = {
-    menu1: <TaylorMenuButton />,
-    // menu1: <TayloyGuitars/>,
-    menu2: <MartinMenuButton />,
-    menu3: <GibsonButton />,
-    menu4: <FenderButton />,
-    menu5: <PaulReedSmithButton />,
-  };
+  
 
   export default function TaylorGuitars() {
     const [expanded, setExpanded] = React.useState(false);

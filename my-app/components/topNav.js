@@ -8,17 +8,13 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Home from '../pages/home'
-import styles from '../styles/Home.module.css'
-import TaylorMenuButton from './guitarButtons/taylorButton'
+
 import TayloyGuitars from './guitarPages/taylor'
 import MartinGuitars from './guitarPages/martin'
 import PrsGuitars from './guitarPages/prs'
 import GibsonGuitars from './guitarPages/gibson'
 import FenderGuitars from './guitarPages/fender'
-import MartinMenuButton from './guitarButtons/martinGuitarButton'
-import PaulReedSmithButton from './guitarButtons/prsButton'
-import GibsonButton from './guitarButtons/gibsonButton'
-import FenderButton from './guitarButtons/fenderButton'
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

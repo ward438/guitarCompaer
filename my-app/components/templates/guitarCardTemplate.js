@@ -46,7 +46,6 @@ export default function GuitarCardTemplate(guitar) {
 
         if (props !== undefined) {
             return [setSelectedGuitars(props), setSelected(true)]
-
         }
 
     }
