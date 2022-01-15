@@ -64,6 +64,7 @@ export default function GuitarCardTemplate(guitar) {
                 {/* change seelected guitars input id from  guitar.guitar.id to guitar.guitar.uuid */}
                 <Card sx={{ maxWidth: 345 }} onClick={() => selectGuitars(guitar.guitar.model)}>
                     <CardHeader
+                        style={{ cursor: 'pointer' }}
                         avatar={
                             <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe" style={{ fontSize: '12px' }}>
                                 <p>{guitar.guitar.make}</p>
