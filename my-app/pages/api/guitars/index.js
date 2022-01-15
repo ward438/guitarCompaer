@@ -56,8 +56,7 @@ const guitars = [
         description: "This Taylor Dreadnought pairs layered walnut back and sides with a solid spruce top, pumping out full-voiced tone that responds to strummers and flatpickers with deep lows, punchy mids, and clear treble notes. The slightly narrower 1-11/16-inch nut width makes barre chords easier on the hands, and with Taylor’s Expression System 2 onboard pickup, you can count on a reliable performance partner that produces natural amplified acoustic tone. The guitar includes a lightweight yet durable Taylor gig bag to accommodate life on the go.",
         price: '799.00',
         imgUrl: 'https://www.taylorguitars.com/sites/default/files/styles/guitar_detail_horizontal/public/responsive-guitar-detail/Taylor-110e-fr-2019.png?itok=2ArCCLd2'
-    },
-    
+    },    
     {
         id: 8,
         make: "Martin",
@@ -100,8 +99,7 @@ const guitars = [
         description: "The King of the Flat-Tops, Now in Two New Colors The legacy of Gibson’s “King of the Flat-Tops” lives on in the SJ-200 Standard. From its inaugural appearance in 1937, Gibson’s SJ-200 set an unmatched standard. The SJ-200 continues a legacy of the world’s most famous acoustic guitar, and certainly one of the most popular. The body features gorgeous flame maple and is finished in your choice of Wine Red or Autumnburst. It comes equipped with gold Grover® Rotomatic® tuners, a TUSQ® nut, saddle, and bridge pins, and it is stage and studio-ready with an internal LR Baggs™ Anthem mic/pickup system. A Gibson hardshell case is included.",
         price: '4,999.00',
         imgUrl: 'https://static.gibson.com/product-images/Acoustic/ACC55F178/Wine%20Red/MCJB20WR_front.jpg'
-    },
-    
+    },    
     {
         id: 14,
         make: "Fender",
@@ -128,7 +126,7 @@ const guitars = [
         make: "Fender",
         model: "ACOUSTASONIC® PLAYER TELECASTER®",
         description: "The evolution of Fender’s trailblazing Acoustasonic platform continues with the introduction of the Acoustasonic Player Telecaster. This acoustic-electric guitar offers its own set of six voices that showcases its unique personality. A streamlined 3-way switch allows for shape-shifting between acoustic and electric tones. With the Acoustasonic Player Telecaster, this platform has been refined to offer a versatile, more accessible tool for the modern musician.",
-        price: '4,999.00',
+        price: '1,199.00',
         imgUrl: 'https://www.fmicassets.com/Damroot/LgJpg/10001/0972213250_fen_ins_frt_1_rr.jpg'
     },{
         id: 18,

@@ -81,6 +81,7 @@ export default function BasicTabs() {
 
 
   return (
+    
     <Box sx={{ width: '100%' }} >
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }} style={{ background: '#81a2ff82' }} >
         <Grid item >
