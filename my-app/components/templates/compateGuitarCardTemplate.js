@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState, useEffect } from "react";
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -13,8 +12,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useDispatch, useSelector } from 'react-redux';
-import {SelectedGuitarsReducer} from '../../reducers/guitars'
+
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -35,37 +33,29 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 
-export default function GuitarCardTemplate(props) {
-    const {guitar} = props;
-    const selectedGuitarIds = useSelector((state => state.guitars.value.selectedIds));
-    const [expanded, setExpanded] = React.useState(false);    
-    const [selected, setSelected] = React.useState(selectedGuitarIds.has(guitar.id))
-    const dispatch = useDispatch();
-    
+export default function CompareGuitarCardTemplate(props) {
+    const { guitar } = props;
+    const [expanded, setExpanded] = React.useState(false);
+
+
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
-    const selectGuitars = () => {
-        //  setSelected(prev=>!prev) is a toggle 
-        setSelected(prev=>!prev)
-    }
 
-    useEffect(() =>{
-        if(selected){
-            dispatch(SelectedGuitarsReducer.actions.select(guitar))
-        }else{
-            dispatch(SelectedGuitarsReducer.actions.deselect(guitar))
-        }
-    }, [selected])
-
-    const cardStyle = !selected ? { background: '#abb7d9', color: 'white' }: { background: 'red', color: 'white' };
+    const cardStyle = {
+        background: '#abb7d9',
+        color: 'white',
+        maxWidth: 345,
+        margin: 5
+    };
 
 
     return (
         <>
-            <Item style={cardStyle}
-            >
-                <Card sx={{ maxWidth: 345 }} onClick={selectGuitars}>
+            <Item style={cardStyle}>
+                <Card sx={{ maxWidth: 345 }}
+                // onClick={selectGuitars}
+                >
                     <CardHeader
                         style={{ cursor: 'pointer' }}
                         avatar={
@@ -73,7 +63,6 @@ export default function GuitarCardTemplate(props) {
                                 <p>{guitar.make}</p>
                             </Avatar>
                         }
-
                         title={guitar.model}
                     />
                     <CardMedia

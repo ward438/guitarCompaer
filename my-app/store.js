@@ -19,7 +19,6 @@ const slices = [
 export const store = configureStore({
     reducer: slices.reduce((reducer, slice) => {
         reducer[slice.name] = slice.reducer;
-        // reducer[slice.name] = slice.reducer;  
         return reducer;
     }, {}),
     middleware,
