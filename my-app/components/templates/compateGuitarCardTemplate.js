@@ -54,6 +54,7 @@ export default function CompareGuitarCardTemplate(props) {
         <>
             <Item style={cardStyle}>
                 <Card sx={{ maxWidth: 345 }}
+                    onDoubleClick={() => window.alert('Selected guitar for compare')}
                 // onClick={selectGuitars}
                 >
                     <CardHeader

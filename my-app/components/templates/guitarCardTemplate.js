@@ -47,6 +47,7 @@ export default function GuitarCardTemplate(props) {
     };
     const selectGuitars = () => {
         //  setSelected(prev=>!prev) is a toggle 
+        
         setSelected(prev=>!prev)
     }
 
@@ -65,7 +66,7 @@ export default function GuitarCardTemplate(props) {
         <>
             <Item style={cardStyle}
             >
-                <Card sx={{ maxWidth: 345 }} onClick={selectGuitars}>
+                <Card sx={{ maxWidth: 345 }} onClick={selectGuitars} >
                     <CardHeader
                         style={{ cursor: 'pointer' }}
                         avatar={

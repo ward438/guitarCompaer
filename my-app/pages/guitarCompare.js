@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import CompareGuitarCardTemplate from '../components/templates/compateGuitarCardTemplate'
+import { CompareGuitarCardTemplate } from '../components/templates/compateGuitarCardTemplate'
 import { useSelector } from "react-redux";
 
 
@@ -19,22 +19,16 @@ const cardStyle = {
   color: 'white',
   display: 'flex',
   flexWrap: 'wrap',
-
+  
 }
 
-const todo = 'TODO :  use doubleclick on compareGuitarCard, store single card in redux, use hover to compare previously selected cards on a modal'
-
-
-function Home() {
+export default function GuitarCompare() {
   // state.guitars.value.selected    "guitars" is the string value of name in SelectedGuitarsReducer
   // 'value' is the key under "initialState"
   const selectedGuitars = useSelector((state => state.guitars.value.selected));
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <div style={{color: 'white'}}>
-        {todo}
-      </div>
       <Grid container spacing={2} >
         <Grid item xs={12} >
           <Item style={cardStyle}>
@@ -44,8 +38,8 @@ function Home() {
             {selectedGuitars.map((guitar, id) => {
               return <>
                 <CompareGuitarCardTemplate
-                  key={id}
-                  guitar={guitar}
+                  key={id}  
+                  guitar={guitar}                  
                 />
                 <br />
               </>
@@ -63,4 +57,4 @@ function Home() {
 
 }
 
-export default Home
+// export default GuitarCompare
