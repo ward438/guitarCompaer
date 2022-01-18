@@ -52,10 +52,7 @@ function Home() {
             })}
           </Item>
         </Grid>
-        <Grid item xs={12} >
-          <Item style={{ float: 'right', width: '100%', background: '#81a2ff82', color: 'white' }}>Footer</Item>
-        </Grid>
-
+     
       </Grid>
 
     </Box>

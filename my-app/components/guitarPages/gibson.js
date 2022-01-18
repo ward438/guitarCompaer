@@ -60,7 +60,7 @@ export default function GibsonGuitars() {
   }
 
   
-  console.log('taylorGuitars: ', gibsonGuitars)
+
   return (
     <>     
       <Grid container spacing={2} >

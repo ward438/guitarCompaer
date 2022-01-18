@@ -51,7 +51,6 @@ export default function TayloyGuitars() {
       .then((response) => response.json())
       .then(response => {
         // taylorGuitarsFilter(response)
-        console.log(response)
         setTaylorGuitars(response)
       })
   }
@@ -62,7 +61,6 @@ export default function TayloyGuitars() {
   // }
 
 
-  console.log('taylorGuitars: ', taylorGuitars)
   return (
     <>
       <Grid container spacing={2} >

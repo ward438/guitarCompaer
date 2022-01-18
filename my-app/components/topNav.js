@@ -7,7 +7,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Home from '../pages/home'
+import GuitarCompare from '../pages/home'
 import { useDispatch } from "react-redux";
 import TayloyGuitars from './guitarPages/taylor'
 import MartinGuitars from './guitarPages/martin'
@@ -20,9 +20,7 @@ function TabPanel(props) {
   const { children, value, index, ...other } = props;
   const [showGuitars, setShowGuitars] = React.useState([]);
   const showSelectedGuitars = () => {
-
   }
-
 
   return (
     <div
@@ -98,7 +96,7 @@ export default function BasicTabs() {
       </Box>
       
       <TabPanel value={value} index={0}>
-        <Home />
+        <GuitarCompare />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <TayloyGuitars />
